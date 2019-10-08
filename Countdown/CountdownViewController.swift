@@ -29,16 +29,21 @@ class CountdownViewController: UIViewController {
         return data
     }()
     
+    private let countdown = Countdown()
+    
     // MARK: - View Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        countdown.duration = 5
+        countdown.delegate = self
     }
     
     // MARK: - Actions
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
-        let timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: timerFinished(timer:)) // For longer timers, make this a weak let so you can cancel before it finishes.
+        countdown.start()
     }
     
     private func timerFinished(timer: Timer) {
@@ -61,7 +66,7 @@ class CountdownViewController: UIViewController {
     }
     
     private func updateViews() {
-        
+        timeLabel.text = String(countdown.timeRemaining)
     }
     
     private func string(from duration: TimeInterval) -> String {
@@ -72,11 +77,12 @@ class CountdownViewController: UIViewController {
 
 extension CountdownViewController: CountdownDelegate {
     func countdownDidUpdate(timeRemaining: TimeInterval) {
-        
+        updateViews()
     }
     
     func countdownDidFinish() {
-        
+        updateViews()
+        showAlert()
     }
 }
 
