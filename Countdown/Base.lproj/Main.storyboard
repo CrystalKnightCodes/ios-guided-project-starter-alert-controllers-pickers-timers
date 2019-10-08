@@ -29,10 +29,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RvQ-Ma-s5H">
-                                        <rect key="frame" x="122" y="374" width="76" height="128"/>
+                                        <rect key="frame" x="16" y="374" width="288" height="128"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KvP-GQ-KBe">
-                                                <rect key="frame" x="0.0" y="0.0" width="76" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="60"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="jwv-Fv-UFj"/>
@@ -46,7 +46,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtE-kF-s1K">
-                                                <rect key="frame" x="0.0" y="68" width="76" height="60"/>
+                                                <rect key="frame" x="0.0" y="68" width="288" height="60"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="byJ-ix-2XF"/>
@@ -62,6 +62,10 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="RvQ-Ma-s5H" firstAttribute="leading" secondItem="sot-3a-UFq" secondAttribute="leading" constant="16" id="KAv-MB-205"/>
+                                    <constraint firstAttribute="trailing" secondItem="RvQ-Ma-s5H" secondAttribute="trailing" constant="16" id="vnc-PN-CH2"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

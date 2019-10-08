@@ -62,14 +62,14 @@ class CountdownViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        countdown.duration = duration
-        countdown.delegate = self
-        
         countdownPicker.delegate = self
         countdownPicker.dataSource = self
         
         countdownPicker.selectRow(1, inComponent: 0, animated: false)
         countdownPicker.selectRow(30, inComponent: 2, animated: false)
+        
+        countdown.duration = duration
+        countdown.delegate = self
         
         timeLabel.font = UIFont.monospacedDigitSystemFont(ofSize: timeLabel.font.pointSize, weight: .medium)
         
