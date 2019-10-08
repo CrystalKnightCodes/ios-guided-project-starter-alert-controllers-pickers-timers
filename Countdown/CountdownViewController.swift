@@ -48,9 +48,11 @@ class CountdownViewController: UIViewController {
     // MARK: - Private
     
     private func showAlert() {
-        let alert = UIAlertController(title: "Timer finished!", message: "Your countdown is over.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Timer finished!", message: "Your countdown is over.", preferredStyle: .alert) // Alternative preferredStyle is .actionSheet which comes up from the bottom
         
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+      //  alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))  // Alternative option for cancel button
+       // alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: nil)) // Alternative option for delete button
         present(alert, animated: true, completion: nil)
     }
     
